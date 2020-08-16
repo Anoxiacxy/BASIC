@@ -1,0 +1,313 @@
+[NUM, 1][LINE_END, 1]
+[NUM, 2][LINE_END, 2]
+[NUM, 3][LINE_END, 3]
+[NUM, 4][INPUT][ID, N][LINE_END, 4]
+[NUM, 5][LET][ID, h][ASSIGN][NUM, 9][LINE_END, 5]
+[NUM, 6][LET][ID, i][ASSIGN][NUM, 10][LINE_END, 6]
+[NUM, 7][LET][ID, j][ASSIGN][NUM, 11][LINE_END, 7]
+[NUM, 8][LET][ID, k][ASSIGN][NUM, 12][LINE_END, 8]
+[NUM, 9][LET][ID, total][ASSIGN][NUM, 0][LINE_END, 9]
+[NUM, 10][LET][ID, a][ASSIGN][NUM, 1][LINE_END, 10]
+[NUM, 11][LET][ID, b][ASSIGN][NUM, 1][LINE_END, 11]
+[NUM, 12][LET][ID, c][ASSIGN][NUM, 1][LINE_END, 12]
+[NUM, 13][LET][ID, d][ASSIGN][NUM, 1][LINE_END, 13]
+[NUM, 14][LET][ID, e][ASSIGN][NUM, 1][LINE_END, 14]
+[NUM, 15][LET][ID, f][ASSIGN][NUM, 1][LINE_END, 15]
+[NUM, 16][FOR][ID, a][ASSIGN][ID, a][ADD][NUM, 1][SEMI_COLON][ID, a][LEQ][ID, N][LINE_END, 16]
+[NUM, 17][LET][ID, b][ASSIGN][NUM, 1][LINE_END, 17]
+[NUM, 18][FOR][ID, b][ASSIGN][ID, b][ADD][NUM, 1][SEMI_COLON][ID, b][LEQ][ID, N][LINE_END, 18]
+[NUM, 19][LET][ID, c][ASSIGN][NUM, 1][LINE_END, 19]
+[NUM, 20][FOR][ID, c][ASSIGN][ID, c][ADD][NUM, 1][SEMI_COLON][ID, c][LEQ][ID, N][LINE_END, 20]
+[NUM, 21][LET][ID, d][ASSIGN][NUM, 1][LINE_END, 21]
+[NUM, 22][FOR][ID, d][ASSIGN][ID, d][ADD][NUM, 1][SEMI_COLON][ID, d][LEQ][ID, N][LINE_END, 22]
+[NUM, 23][LET][ID, e][ASSIGN][NUM, 1][LINE_END, 23]
+[NUM, 24][FOR][ID, e][ASSIGN][ID, e][ADD][NUM, 1][SEMI_COLON][ID, e][LEQ][ID, N][LINE_END, 24]
+[NUM, 25][LET][ID, f][ASSIGN][NUM, 1][LINE_END, 25]
+[NUM, 26][FOR][ID, f][ASSIGN][ID, f][ADD][NUM, 1][SEMI_COLON][ID, f][LEQ][ID, N][LINE_END, 26]
+[NUM, 27][IF][LParentheses][ID, a][EQU][ID, b][OR][ID, a][EQU][ID, c][OR][ID, a][EQU][ID, d][OR][ID, a][EQU][ID, e][OR][ID, a][EQU][ID, f][OR][ID, a][EQU][ID, h][OR][ID, a][EQU][ID, i][OR][ID, a][EQU][ID, j][OR][ID, a][EQU][ID, k][OR][ID, b][EQU][ID, c][OR][ID, b][EQU][ID, d][OR][ID, b][EQU][ID, e][OR][ID, b][EQU][ID, f][OR][ID, b][EQU][ID, h][OR][ID, b][EQU][ID, i][OR][ID, b][EQU][ID, j][OR][ID, b][EQU][ID, k][OR][ID, c][EQU][ID, d][OR][ID, c][EQU][ID, e][OR][ID, c][EQU][ID, f][OR][ID, c][EQU][ID, h][OR][ID, c][EQU][ID, i][OR][ID, c][EQU][ID, j][OR][ID, c][EQU][ID, k][OR][ID, d][EQU][ID, e][OR][ID, d][EQU][ID, f][OR][ID, d][EQU][ID, h][OR][ID, d][EQU][ID, i][OR][ID, d][EQU][ID, j][OR][ID, d][EQU][ID, k][OR][ID, e][EQU][ID, f][OR][ID, e][EQU][ID, h][OR][ID, e][EQU][ID, i][OR][ID, e][EQU][ID, j][OR][ID, e][EQU][ID, k][OR][ID, f][EQU][ID, h][OR][ID, f][EQU][ID, i][OR][ID, f][EQU][ID, j][OR][ID, f][EQU][ID, k][OR][ID, i][EQU][ID, j][OR][ID, h][EQU][ID, k][RParentheses][THEN][NUM, 24][LINE_END, 27]
+[NUM, 28][LET][ID, total][ASSIGN][ID, total][ADD][NUM, 1][LINE_END, 28]
+[NUM, 29][END][FOR][LINE_END, 29]
+[NUM, 30][END][FOR][LINE_END, 30]
+[NUM, 31][END][FOR][LINE_END, 31]
+[NUM, 32][END][FOR][LINE_END, 32]
+[NUM, 33][END][FOR][LINE_END, 33]
+[NUM, 34][END][FOR][LINE_END, 34]
+[NUM, 35][EXIT][ID, total][LINE_END, 35]
+- Program: 
+	- InputStmt: 
+		- Identifier: N
+	- LetIdStmt: h
+		- Number: 9
+	- LetIdStmt: i
+		- Number: 10
+	- LetIdStmt: j
+		- Number: 11
+	- LetIdStmt: k
+		- Number: 12
+	- LetIdStmt: total
+		- Number: 0
+	- LetIdStmt: a
+		- Number: 1
+	- LetIdStmt: b
+		- Number: 1
+	- LetIdStmt: c
+		- Number: 1
+	- LetIdStmt: d
+		- Number: 1
+	- LetIdStmt: e
+		- Number: 1
+	- LetIdStmt: f
+		- Number: 1
+	- ForStmt: 
+		- Binary: <=
+			- Identifier: a
+			- Identifier: N
+		- AssignExprAST: =
+			- Identifier: a
+			- Binary: +
+				- Identifier: a
+				- Number: 1
+		- Number: 29
+	- LetIdStmt: b
+		- Number: 1
+	- ForStmt: 
+		- Binary: <=
+			- Identifier: b
+			- Identifier: N
+		- AssignExprAST: =
+			- Identifier: b
+			- Binary: +
+				- Identifier: b
+				- Number: 1
+		- Number: 29
+	- LetIdStmt: c
+		- Number: 1
+	- ForStmt: 
+		- Binary: <=
+			- Identifier: c
+			- Identifier: N
+		- AssignExprAST: =
+			- Identifier: c
+			- Binary: +
+				- Identifier: c
+				- Number: 1
+		- Number: 29
+	- LetIdStmt: d
+		- Number: 1
+	- ForStmt: 
+		- Binary: <=
+			- Identifier: d
+			- Identifier: N
+		- AssignExprAST: =
+			- Identifier: d
+			- Binary: +
+				- Identifier: d
+				- Number: 1
+		- Number: 29
+	- LetIdStmt: e
+		- Number: 1
+	- ForStmt: 
+		- Binary: <=
+			- Identifier: e
+			- Identifier: N
+		- AssignExprAST: =
+			- Identifier: e
+			- Binary: +
+				- Identifier: e
+				- Number: 1
+		- Number: 29
+	- LetIdStmt: f
+		- Number: 1
+	- ForStmt: 
+		- Binary: <=
+			- Identifier: f
+			- Identifier: N
+		- AssignExprAST: =
+			- Identifier: f
+			- Binary: +
+				- Identifier: f
+				- Number: 1
+		- Number: 29
+	- IfStmt: 
+		- Binary: ||
+			- Binary: ||
+				- Binary: ||
+					- Binary: ||
+						- Binary: ||
+							- Binary: ||
+								- Binary: ||
+									- Binary: ||
+										- Binary: ||
+											- Binary: ||
+												- Binary: ||
+													- Binary: ||
+														- Binary: ||
+															- Binary: ||
+																- Binary: ||
+																	- Binary: ||
+																		- Binary: ||
+																			- Binary: ||
+																				- Binary: ||
+																					- Binary: ||
+																						- Binary: ||
+																							- Binary: ||
+																								- Binary: ||
+																									- Binary: ||
+																										- Binary: ||
+																											- Binary: ||
+																												- Binary: ||
+																													- Binary: ||
+																														- Binary: ||
+																															- Binary: ||
+																																- Binary: ||
+																																	- Binary: ||
+																																		- Binary: ||
+																																			- Binary: ||
+																																				- Binary: ||
+																																					- Binary: ||
+																																						- Binary: ||
+																																							- Binary: ||
+																																								- Binary: ||
+																																									- Binary: ||
+																																										- Binary: ==
+																																											- Identifier: a
+																																											- Identifier: b
+																																										- Binary: ==
+																																											- Identifier: a
+																																											- Identifier: c
+																																									- Binary: ==
+																																										- Identifier: a
+																																										- Identifier: d
+																																								- Binary: ==
+																																									- Identifier: a
+																																									- Identifier: e
+																																							- Binary: ==
+																																								- Identifier: a
+																																								- Identifier: f
+																																						- Binary: ==
+																																							- Identifier: a
+																																							- Identifier: h
+																																					- Binary: ==
+																																						- Identifier: a
+																																						- Identifier: i
+																																				- Binary: ==
+																																					- Identifier: a
+																																					- Identifier: j
+																																			- Binary: ==
+																																				- Identifier: a
+																																				- Identifier: k
+																																		- Binary: ==
+																																			- Identifier: b
+																																			- Identifier: c
+																																	- Binary: ==
+																																		- Identifier: b
+																																		- Identifier: d
+																																- Binary: ==
+																																	- Identifier: b
+																																	- Identifier: e
+																															- Binary: ==
+																																- Identifier: b
+																																- Identifier: f
+																														- Binary: ==
+																															- Identifier: b
+																															- Identifier: h
+																													- Binary: ==
+																														- Identifier: b
+																														- Identifier: i
+																												- Binary: ==
+																													- Identifier: b
+																													- Identifier: j
+																											- Binary: ==
+																												- Identifier: b
+																												- Identifier: k
+																										- Binary: ==
+																											- Identifier: c
+																											- Identifier: d
+																									- Binary: ==
+																										- Identifier: c
+																										- Identifier: e
+																								- Binary: ==
+																									- Identifier: c
+																									- Identifier: f
+																							- Binary: ==
+																								- Identifier: c
+																								- Identifier: h
+																						- Binary: ==
+																							- Identifier: c
+																							- Identifier: i
+																					- Binary: ==
+																						- Identifier: c
+																						- Identifier: j
+																				- Binary: ==
+																					- Identifier: c
+																					- Identifier: k
+																			- Binary: ==
+																				- Identifier: d
+																				- Identifier: e
+																		- Binary: ==
+																			- Identifier: d
+																			- Identifier: f
+																	- Binary: ==
+																		- Identifier: d
+																		- Identifier: h
+																- Binary: ==
+																	- Identifier: d
+																	- Identifier: i
+															- Binary: ==
+																- Identifier: d
+																- Identifier: j
+														- Binary: ==
+															- Identifier: d
+															- Identifier: k
+													- Binary: ==
+														- Identifier: e
+														- Identifier: f
+												- Binary: ==
+													- Identifier: e
+													- Identifier: h
+											- Binary: ==
+												- Identifier: e
+												- Identifier: i
+										- Binary: ==
+											- Identifier: e
+											- Identifier: j
+									- Binary: ==
+										- Identifier: e
+										- Identifier: k
+								- Binary: ==
+									- Identifier: f
+									- Identifier: h
+							- Binary: ==
+								- Identifier: f
+								- Identifier: i
+						- Binary: ==
+							- Identifier: f
+							- Identifier: j
+					- Binary: ==
+						- Identifier: f
+						- Identifier: k
+				- Binary: ==
+					- Identifier: i
+					- Identifier: j
+			- Binary: ==
+				- Identifier: h
+				- Identifier: k
+		- Number: 24
+	- LetIdStmt: total
+		- Binary: +
+			- Identifier: total
+			- Number: 1
+	- EndForStmt: 
+		- Number: 26
+	- EndForStmt: 
+		- Number: 24
+	- EndForStmt: 
+		- Number: 22
+	- EndForStmt: 
+		- Number: 20
+	- EndForStmt: 
+		- Number: 18
+	- EndForStmt: 
+		- Number: 16
+	- ExitStmt: 
+		- Identifier: total
