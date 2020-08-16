@@ -1,6 +1,7 @@
 #pragma once
 #include <memory>
 #include <map>
+#include <set>
 #include <stack>
 #include "ASTNode.hpp"
 #include "Lexer.hpp"
@@ -15,7 +16,8 @@ private:
     int lineno;
     std::stack<int>indexOfFor;
     std::map<Token::Type, int>BinopPrecedence;
-    
+    std::vector<std::pair<int, int> >jumpTarget;
+    std::set<int>progLine;
     bool getNextToken() {
         if (index >= total) return false;
         value = tokens[index].getValue();
@@ -96,6 +98,9 @@ public:
                 logError("Statement did not end properly!", lineno);
             }
         }
+        for (auto line : jumpTarget)
+            if (progLine.count(line.second) == 0)
+                logError("Cannot find the target line!", line.first);
         return std::move(program);
     }
     // Statement := GotoStmtAST
@@ -107,6 +112,7 @@ public:
     //           := ExitStmtAST
     std::shared_ptr<StmtAST> parseStatement() {
         lineno = value;
+        progLine.insert(lineno);
         getNextToken();
         if (type == Token::LINE_END) return nullptr;
         std::shared_ptr<StmtAST> stmt;
@@ -142,6 +148,9 @@ public:
         getNextToken();
         auto target = parseNumberExpr();
         if (!target) return logError("missing a number of line for GOTO!", lineno), nullptr;
+        jumpTarget.emplace_back(
+            lineno, std::dynamic_pointer_cast<NumberExprAST>(target)->value
+        );
         return std::make_shared<GotoStmtAST>(std::move(target));
     }
     // IfStmtAST := IF {Expr} THEN {Number}
@@ -154,6 +163,9 @@ public:
         getNextToken();
         auto target = parseNumberExpr();
         if (!target) return logError("missing IF target!", lineno), nullptr;;
+        jumpTarget.emplace_back(
+            lineno, std::dynamic_pointer_cast<NumberExprAST>(target)->value
+        );
         return std::make_shared<IfStmtAST>(std::move(cond), std::move(target));
     }
     // ForStmtAST := For {AssignExpr}; {Expr}

@@ -96,7 +96,7 @@ public:
         LOAD, STORE, LET,
         GOTO, BEQ, BNE,
         INPUT, EXIT, JAL, 
-        LINENO
+        LINENO, TAG
     };
 private:
            

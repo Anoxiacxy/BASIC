@@ -5,7 +5,7 @@
 5 LET n = INT[m]
 6 LET n[3 * 3] =  2
 7 LET tmp = INT[n[9]]
-8 LET i = 0
+8 LET i = 0 
 9 FOR i = i + 1; i < n[9]
 10 IF i % 2 == 0 THEN 12
 11 LET n[i] = i

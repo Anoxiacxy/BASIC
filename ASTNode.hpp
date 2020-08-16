@@ -501,6 +501,12 @@ public:
         stmt->toQuaternions(quaternions, varName_arrDim);
         std::dynamic_pointer_cast<NumArgv>(quaternions[pos]->argv1)->value = quaternions.size() - pos;
         quaternions.push_back(std::make_shared<Quaternion>(
+            nullptr,
+            nullptr,
+            nullptr,
+            Quaternion::TAG
+        ));
+        quaternions.push_back(std::make_shared<Quaternion>(
             exp->toQuaternions(quaternions, varName_arrDim),
             std::make_shared<NumArgv>(0),
             Target->toQuaternions(quaternions, varName_arrDim),
