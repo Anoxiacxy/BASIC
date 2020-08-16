@@ -1,5 +1,14 @@
 # BASIC编译器	
 
+### 测试方法
+
+在 Linux 环境下：
+
+```
+cd test
+python3 TestScript.py
+```
+
 ### 测试情况
 
 | 测试点名称    | 通过情况 | 返回值   | 时钟周期 |
